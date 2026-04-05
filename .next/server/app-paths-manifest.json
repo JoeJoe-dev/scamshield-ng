@@ -1,0 +1,8 @@
+{
+  "/onboarding/page": "app/onboarding/page.js",
+  "/auth/page": "app/auth/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/alerts/page": "app/alerts/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/verify/page": "app/verify/page.js"
+}
