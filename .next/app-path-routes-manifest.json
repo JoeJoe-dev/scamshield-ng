@@ -1,0 +1,16 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/agent-verify/page": "/agent-verify",
+  "/alerts/page": "/alerts",
+  "/auth/page": "/auth",
+  "/dashboard/page": "/dashboard",
+  "/education/page": "/education",
+  "/onboarding/page": "/onboarding",
+  "/page": "/",
+  "/profile/page": "/profile",
+  "/report/page": "/report",
+  "/verify/page": "/verify",
+  "/alerts/[id]/page": "/alerts/[id]",
+  "/education/[slug]/page": "/education/[slug]",
+  "/profile/[slug]/page": "/profile/[slug]"
+}

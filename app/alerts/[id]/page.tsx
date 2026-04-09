@@ -1,9 +1,20 @@
 import { AppBar } from "@/components/AppBar";
 import { BottomNav } from "@/components/BottomNav";
-import { AlertTriangle, Share2, ShieldCheck, ExternalLink } from "lucide-react";
+import { ShareButton } from "@/components/ShareButton";
+import { AlertTriangle, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
-export default function AlertDetail({ params }: { params: { id: string } }) {
+export async function generateStaticParams() {
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ];
+}
+
+export default async function AlertDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  
   return (
     <div className="min-h-screen bg-surface dark:bg-dark-surface pb-24">
       <AppBar title="Alert Details" back="/alerts" showBell />
@@ -33,10 +44,7 @@ export default function AlertDetail({ params }: { params: { id: string } }) {
           <Link href="/verify" className="flex-1 bg-navy-gradient text-white font-bold py-3.5 rounded-2xl text-sm text-center font-display hover:opacity-90">
             Verify a Number
           </Link>
-          <button onClick={() => navigator.share ? navigator.share({title:"ScamShield Alert", text:"Fake Rental Listings in Lekki!"}) : alert("Share this alert with your contacts.")}
-            className="w-12 h-12 bg-surface-lowest dark:bg-dark-surface-card shadow-card dark:shadow-dark-card rounded-2xl flex items-center justify-center text-slate-500 hover:text-navy dark:hover:text-slate-200 transition-colors">
-            <Share2 size={18} />
-          </button>
+          <ShareButton />
         </div>
       </div>
       <BottomNav />

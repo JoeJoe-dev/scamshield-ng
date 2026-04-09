@@ -30,8 +30,16 @@ const CONTENT: Record<string, { title: string; intro: string; tips: string[]; si
   },
 };
 
-export default function EducationDetail({ params }: { params: { slug: string } }) {
-  const content = CONTENT[params.slug] ?? CONTENT["job-scams"];
+export async function generateStaticParams() {
+  return Object.keys(CONTENT).map((slug) => ({
+    slug: slug,
+  }));
+}
+
+export default async function EducationDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const content = CONTENT[slug] ?? CONTENT["job-scams"];
+  
   return (
     <div className="min-h-screen bg-surface dark:bg-dark-surface pb-24">
       <AppBar title={content.title} back="/education" showBell />
