@@ -73,7 +73,7 @@ export default function Onboarding() {
       {/* Slide content */}
       <div className="flex-1 flex flex-col items-center justify-center px-6 relative z-10">
         {/* Icon in glass circle */}
-        <div className="relative mb-10 animate-scale-in">
+        <div className="relative mt-[-5rem] mb-10 animate-scale-in">
           <div className="absolute inset-0 rounded-full bg-green-safe/15 scale-150 ring-pulse" />
           <div className="absolute inset-0 rounded-full bg-white/5 scale-125 ring-pulse" style={{animationDelay:"0.5s"}} />
           <div className="w-32 h-32 rounded-full glass flex items-center justify-center">
@@ -84,7 +84,8 @@ export default function Onboarding() {
         </div>
 
         {/* Text */}
-        <h2 className="text-2xl font-bold text-white font-display text-center leading-snug mt-6 mb-10 
+        <h2 className="text-xl font-bold text-white font-display text-center leading-snug 
+        mt-5 mb-10 
         whitespace-pre-line animate-fade-up">
           {current.title}
         </h2>

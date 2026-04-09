@@ -1,16 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/agent-verify/page": "app/agent-verify/page.js",
-  "/alerts/page": "app/alerts/page.js",
-  "/auth/page": "app/auth/page.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/education/page": "app/education/page.js",
-  "/onboarding/page": "app/onboarding/page.js",
   "/page": "app/page.js",
-  "/profile/page": "app/profile/page.js",
-  "/report/page": "app/report/page.js",
-  "/verify/page": "app/verify/page.js",
-  "/alerts/[id]/page": "app/alerts/[id]/page.js",
-  "/education/[slug]/page": "app/education/[slug]/page.js",
-  "/profile/[slug]/page": "app/profile/[slug]/page.js"
+  "/onboarding/page": "app/onboarding/page.js"
 }
